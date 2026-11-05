@@ -1,0 +1,43 @@
+{
+  "name": "magpie-agent-ohmygame",
+  "version": "0.2.0",
+  "description": "OhMyGame as a Magpie agent, with an Agents-page panel for opting Magpie's image models into OhMyGame",
+  "type": "module",
+  "license": "MIT",
+  "main": "./host.mjs",
+  "os": ["darwin"],
+  "files": [
+    "ohmygame.agent.js",
+    "host.mjs",
+    "visibility.mjs",
+    "ohmygame.test.mjs",
+    "panel",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": ["magpie", "magpie-agent", "ohmygame", "pi-agent"],
+  "scripts": {
+    "test": "node --test ohmygame.test.mjs"
+  },
+  "magpie": {
+    "name": "OhMyGame · Magpie Agent",
+    "summary": {
+      "zh": "把 OhMyGame 接进 Magpie 的 Agents 页统一管理模型，并可勾选出图模型",
+      "en": "OhMyGame on Magpie's Agents page, with opt-in image models"
+    },
+    "agent": "./ohmygame.agent.js",
+    "options": { "imageModels": [] },
+    "page": { "title": "OhMyGame 生图模型", "file": "panel/index.html" },
+    "panels": [
+      { "slot": "agents", "file": "panel/index.html", "title": "OhMyGame 生图模型" }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Triple3h/magpie-agent-ohmygame.git"
+  },
+  "homepage": "https://github.com/Triple3h/magpie-agent-ohmygame#readme",
+  "bugs": {
+    "url": "https://github.com/Triple3h/magpie-agent-ohmygame/issues"
+  }
+}
