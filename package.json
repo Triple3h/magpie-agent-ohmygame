@@ -23,7 +23,7 @@
     "name": "OhMyGame · Magpie Agent",
     "summary": {
       "zh": "把 OhMyGame 接进 Magpie 的 Agents 页统一管理模型，并可勾选出图模型",
-      "en": "OhMyGame on Magpie's Agents page, with opt-in image models"
+      "en": "Use Magpie models in OhMyGame, with an Agents-page panel for image models"
     },
     "agent": "./ohmygame.agent.js",
     "options": { "imageModels": [] },
